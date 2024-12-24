@@ -1,0 +1,114 @@
+.phonetext{
+    margin-top: 20px;
+    font-size: 55px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+}
+.mintext{
+    transition: 0.5s ease,transform 0.5s ease;
+    font-size: 41px;
+    font-weight: bold;
+    color: rgb(153, 120, 81);
+    opacity: 0; 
+    transform: scale(0); 
+    animation: appearFromCenter 2s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ .mintext2{
+    transition: 0.5s ease,transform 0.5s ease;
+    font-size: 41px;
+    font-weight: bold;
+    color: rgb(153, 120, 81);
+    opacity: 0; 
+    transform: scale(0);
+    animation: appearFromCenter 2s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+ }
+ .mintext3{
+    transition: 0.5s ease,transform 0.5s ease;
+    font-size: 41px;
+    font-weight: bold;
+    color: rgb(84, 166, 238);
+    opacity: 0;
+    transform: scale(0);
+    animation: appearFromCenter 2s ease-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+@keyframes appearFromCenter {
+0% {
+opacity: 0.5;
+transform: scale(0);
+}
+50% {
+opacity: 0.2;
+transform: scale(1.2);
+}
+100% {
+opacity: 1;
+transform: scale(0.9); 
+}
+
+   
+}
+
+.phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+   transition: transform 0.5s;
+}
+.phone:hover{
+    transform: scale(0.9);
+}
+.line-container {
+    top: 10px;
+    position: relative;
+    width: auto;
+    height: 5px;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+.line {
+position: absolute;
+top: 0;
+left: 50%;
+width: 0;
+height: 5px;
+background: linear-gradient(200deg,black,bisque,black);
+animation: draw-line 5s ease-out forwards;
+}
+
+@keyframes draw-line {
+0% {
+width: 0;
+transform: translateX(-50%);
+}
+50% {
+width: 0;
+transform: translateX(-50%);
+}
+100% {
+width: 100%;
+transform: translateX(-50%);
+}
+}
