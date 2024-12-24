@@ -4,41 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> SHOWOFF </title>
+    <title>SHOWOFF</title>
     <link rel="stylesheet" href="contentDetails.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-<div id="1"></div>
-<script>
-    load("header.html");
-    function load(url)
-    {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(1).innerHTML = req.responseText;
-    }
-</script>
-    
-    <div id="containerProduct">
-    </div>
-    
-<script src="contentDetails.js"></script>
-<div id="4"></div>
-<script>
-    load("footer.html");
-    function load(url)
-    {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(4).innerHTML = req.responseText;
-    }
-</script>
+    <div id="1"></div>
+    <script>
+        // Updated load function with asynchronous request
+        function load(url, elementId) {
+            let req = new XMLHttpRequest();
+            req.open("GET", url, true); // Asynchronous request
+            req.onload = function () {
+                if (req.status === 200) {
+                    document.getElementById(elementId).innerHTML = req.responseText;
+                } else {
+                    console.error(`Failed to load ${url}: ${req.status}`);
+                }
+            };
+            req.send();
+        }
+
+        // Load header and footer dynamically
+        load("header.html", "1");
+        load("footer.html", "4");
+    </script>
+
+    <div id="containerProduct"></div>
+
+    <script src="contentDetails.js"></script>
+
+    <div id="4"></div>
 </body>
 </html>
