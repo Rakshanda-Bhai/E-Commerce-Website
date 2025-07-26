@@ -1,5 +1,5 @@
 # E-Commerce-Website
-E-Commerce website using HTML,CSS AND JS 
+E-Commerce website using HTML,CSS AND JS <br>
 https://rakshanda-bhai.github.io/E-Commerce-Website/
 <h3>ABOUT</h3>
 1) This contains an index page with animations.<br>
