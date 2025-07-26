@@ -1,5 +1,6 @@
 # E-Commerce-Website
 E-Commerce website using HTML,CSS AND JS 
+https://rakshanda-bhai.github.io/E-Commerce-Website/
 <h3>ABOUT</h3>
 1) This contains an index page with animations.<br>
 2) contains cart page and animated login-registration form.<br>
